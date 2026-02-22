@@ -11,22 +11,22 @@ const fadeUp = {
 
 const TIMELINE = [
     {
-        year: '2023 — Présent',
-        title: 'Licence Intelligence Artificielle',
-        company: 'Université Paris-Saclay',
-        desc: 'Formation en machine learning, deep learning, traitement du langage naturel et vision par ordinateur.',
+        year: '2025 — 2027',
+        title: 'Master, Systèmes Autonomes & IA',
+        company: 'Université Paris-Saclay, Gif-sur-Yvette',
+        desc: 'UE : ML, RL, Vision par ordinateur, Traitement d’image, Traitement du signal, Python, Informatique industrielle.',
     },
     {
-        year: '2022 — 2023',
-        title: 'Baccalauréat Scientifique',
-        company: 'Lycée — Mention Très Bien',
-        desc: "Spécialité Mathématiques et Numérique & Sciences Informatiques. Passionné par l'algorithmique dès le lycée.",
+        year: '2024 — 2025',
+        title: 'Licence E3a',
+        company: 'Université Paris-Saclay, Gif-sur-Yvette',
+        desc: 'UE : C, Vhdl, Probabilités, Matlab, Automatique, Électronique Numérique, Mathématiques.',
     },
     {
-        year: '2022- 2023',
-        title: 'Baccalauréat Mathématique',
-        company: 'Auto-formation',
-        desc: 'Création de mes premiers modèles ML via Kaggle, Coursera et des projets personnels avec Python et TensorFlow.',
+        year: '2021 — 2024',
+        title: "Classe préparatoire en science de l'ingénieur et Automatique",
+        company: 'École Polytechnique de Constantine',
+        desc: "UE : C, SQL, Probabilités, Électronique, Électricité, Analyse, Algèbre, Physique. Concours national d'accès aux grandes écoles : classé 105/2000.",
     },
 ];
 
