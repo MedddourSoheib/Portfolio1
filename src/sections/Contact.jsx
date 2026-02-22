@@ -1,132 +1,61 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i = 0) => ({
-        opacity: 1,
-        y: 0,
-        transition: { delay: i * 0.12, duration: 0.5, ease: 'easeOut' },
-    }),
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
 export default function Contact() {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const [form, setForm] = useState({ name: '', email: '', message: '' });
-    const [sent, setSent] = useState(false);
-
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSent(true);
-        setTimeout(() => setSent(false), 3000);
-        setForm({ name: '', email: '', message: '' });
-    };
 
     return (
-        <section className="section" id="contact" ref={ref}>
-            <div className="container">
-                <motion.h2
-                    className="section-title"
+        <section className="section" id="contact" style={{ padding: '80px 0' }}>
+            <div className="container" ref={ref}>
+                <motion.div
+                    className="contact-card"
                     variants={fadeUp}
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}
                 >
-                    Contact
-                </motion.h2>
-                <motion.p
-                    className="section-subtitle"
-                    variants={fadeUp}
-                    initial="hidden"
-                    animate={inView ? 'visible' : 'hidden'}
-                    custom={1}
-                >
-                    Vous avez un projet en tête ? N'hésitez pas à me contacter.
-                </motion.p>
+                    <p className="contact-card-text">
+                        Vous avez un projet en tête ou vous souhaitez collaborer&nbsp;? <br />
+                        Construisons quelque chose d'intelligent ensemble.
+                    </p>
 
-                <div className="contact-layout">
-                    <motion.div
-                        className="contact-info"
-                        variants={fadeUp}
-                        initial="hidden"
-                        animate={inView ? 'visible' : 'hidden'}
-                        custom={2}
-                    >
-                        <div className="contact-info-item">
-                            <div className="contact-info-icon">📧</div>
-                            <div className="contact-info-text">
-                                <h4>Email</h4>
-                                <p>pro.soheib@gmail.com</p>
-                            </div>
-                        </div>
-                        <div className="contact-info-item">
-                            <div className="contact-info-icon">📍</div>
-                            <div className="contact-info-text">
-                                <h4>Localisation</h4>
-                                <p>Massy, Paris</p>
-                            </div>
-                        </div>
-                        <div className="contact-info-item">
-                            <div className="contact-info-icon">🟢</div>
-                            <div className="contact-info-text">
-                                <h4>Disponibilité</h4>
-                                <p>Disponible pour des projets freelance</p>
-                            </div>
-                        </div>
-                    </motion.div>
+                    <div className="contact-links">
+                        <a href="mailto:pro.soheib@gmail.com" className="contact-link" title="Email">
+                            <span className="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                            </span>
+                            <span className="contact-label">EMAIL</span>
+                        </a>
 
-                    <motion.form
-                        className="contact-form"
-                        onSubmit={handleSubmit}
-                        variants={fadeUp}
-                        initial="hidden"
-                        animate={inView ? 'visible' : 'hidden'}
-                        custom={3}
-                    >
-                        <div className="form-group">
-                            <label htmlFor="name">Nom</label>
-                            <input
-                                id="name"
-                                name="name"
-                                type="text"
-                                placeholder="Votre nom"
-                                value={form.name}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                placeholder="votre@email.com"
-                                value={form.email}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message">Message</label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                placeholder="Décrivez votre projet..."
-                                value={form.message}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <button type="submit" className="btn-submit">
-                            {sent ? '✅ Message envoyé !' : '🚀 Envoyer le message'}
-                        </button>
-                    </motion.form>
-                </div>
+                        <a href="https://github.com/" target="_blank" rel="noreferrer" className="contact-link" title="GitHub">
+                            <span className="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                                </svg>
+                            </span>
+                            <span className="contact-label">GITHUB</span>
+                        </a>
+
+                        <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="contact-link" title="LinkedIn">
+                            <span className="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </span>
+                            <span className="contact-label">LINKEDIN</span>
+                        </a>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );
