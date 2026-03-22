@@ -11,43 +11,39 @@ const fadeUp = {
 
 const SKILLS = [
     {
-        category: '🧠 Intelligence Artificielle',
+        category: '🧠 IA & Big Data',
         items: [
-            { name: 'PyTorch', level: 85 },
-            { name: 'TensorFlow / Keras', level: 80 },
-            { name: 'Scikit-Learn', level: 90 },
-            { name: 'HuggingFace', level: 75 },
-            { name: 'LangChain', level: 70 },
+            { name: 'TensorFlow / PyTorch', level: 85 },
+            { name: 'Scikit-Learn (ML)', level: 85 },
+            { name: 'Pandas / Numpy / Spark', level: 80 },
+            { name: 'OpenCV / Keras', level: 75 },
+            { name: 'Matplotlib', level: 80 },
         ],
     },
     {
-        category: '💻 Développement',
+        category: '💻 Langages & BDD',
         items: [
-            { name: 'Python', level: 92 },
-            { name: 'JavaScript / TypeScript', level: 82 },
-            { name: 'React', level: 80 },
-            { name: 'FastAPI / Flask', level: 78 },
-            { name: 'SQL / NoSQL', level: 72 },
+            { name: 'Python', level: 95 },
+            { name: 'C / C++', level: 80 },
+            { name: 'SQL / MySQL', level: 75 },
+            { name: 'Matlab / Simulink', level: 80 },
         ],
     },
     {
-        category: '🎨 3D & Visualisation',
+        category: '⚙️ DevOps & Systèmes',
         items: [
-            { name: 'Three.js', level: 75 },
-            { name: 'GSAP', level: 78 },
-            { name: 'Framer Motion', level: 82 },
-            { name: 'WebGL / GLSL', level: 60 },
-            { name: 'D3.js', level: 70 },
+            { name: 'Git / GitHub', level: 85 },
+            { name: 'Docker', level: 70 },
+            { name: 'Linux / Windows', level: 85 },
+            { name: 'VS Code / Quartus', level: 80 },
         ],
     },
     {
-        category: '☁️ DevOps & Cloud',
+        category: '📝 Bureautique & Outils',
         items: [
-            { name: 'Docker', level: 75 },
-            { name: 'Git / GitHub', level: 88 },
-            { name: 'Linux', level: 80 },
-            { name: 'AWS / GCP', level: 60 },
-            { name: 'CI/CD', level: 65 },
+            { name: 'LaTeX', level: 85 },
+            { name: 'Excel', level: 90 },
+            { name: 'Suite Microsoft Office', level: 85 },
         ],
     },
 ];

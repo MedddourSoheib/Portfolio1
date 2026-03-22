@@ -41,7 +41,7 @@ export default function Hero() {
                 <p className="hero-greeting">👋 Bonjour, je suis</p>
                 <h1 className="hero-name gradient-text">Soheib Meddour</h1>
                 <p className="hero-title">
-                    Étudiant ingénieur en <strong style={{ color: 'var(--accent-secondary)' }}>Intelligence Artificielle</strong><br />
+                    Étudiant en <strong style={{ color: 'var(--accent-secondary)' }}>Master SAITIE</strong><br />
                     Passionné par la 3D, le Machine Learning & les interfaces futuristes
                 </p>
 

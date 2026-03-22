@@ -42,12 +42,7 @@ export default function About() {
                 >
                     À propos
                 </motion.h2>
-                <motion.p
-                    className="section-subtitle"
-                    variants={fadeUp} initial="hidden" animate={inView ? 'visible' : 'hidden'} custom={1}
-                >
-                    Étudiant passionné par l'IA, je conçois des solutions intelligentes mêlant algorithmes avancés et interfaces immersives.
-                </motion.p>
+
 
                 <div className="about-grid">
                     <motion.div
@@ -64,26 +59,7 @@ export default function About() {
                             m'investir dans des <strong style={{ color: 'var(--accent-primary)' }}>projets techniques et innovants</strong>.
                         </p>
 
-                        <div style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
-                            {[
-                                { label: 'Projets IA', value: '10+' },
-                                { label: 'Années de code', value: '4+' },
-                                { label: 'Contributeur Open Source', value: '✓' },
-                            ].map((stat) => (
-                                <div key={stat.label} style={{
-                                    background: 'var(--glass-bg)', border: '1px solid var(--glass-border)',
-                                    borderRadius: 'var(--border-radius)', padding: '20px 24px', textAlign: 'center',
-                                    backdropFilter: 'blur(20px)', flex: '1', minWidth: '100px',
-                                }}>
-                                    <div style={{ fontSize: '1.8rem', fontWeight: 800, background: 'var(--accent-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                                        {stat.value}
-                                    </div>
-                                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '4px', letterSpacing: '1px', textTransform: 'uppercase' }}>
-                                        {stat.label}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+
                     </motion.div>
 
                     <motion.div

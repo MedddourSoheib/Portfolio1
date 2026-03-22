@@ -11,53 +11,48 @@ const fadeUp = {
 
 const PROJECTS = [
     {
-        icon: '🤖',
-        title: 'NeuralChat — LLM Assistant',
-        desc: 'Assistant conversationnel basé sur un LLM fine-tuné pour le domaine médical. Interface React + API FastAPI.',
-        tech: ['Python', 'PyTorch', 'FastAPI', 'React'],
-        github: '#',
+        icon: '🚗',
+        title: "Course Voitures Autonomes Paris Saclay (CoVAPSy) à l'ENS Paris-Saclay",
+        desc: 'Description à remplacer...',
+        tech: ['Python', 'ROS', 'C++'],
+        github: 'https://sti.eduscol.education.fr/si-ens-paris-saclay/ressources_pedagogiques/covapsy-tp-autour-des-voitures-autonomes',
+        demo: '#',
+    },
+
+    {
+        icon: '🧠',
+        title: 'Cliff Walking : SARSA et Q-Learning',
+        desc: "Description à remplacer...",
+        tech: ['Python', 'Reinforcement Learning', 'Numpy'],
+        github: 'https://github.com/MedddourSoheib/RL-SARSA-Q-learning',
         demo: '#',
     },
     {
-        icon: '👁️',
-        title: 'VisionAI — Détection d\'objets',
-        desc: "Système de détection d'objets en temps réel avec YOLOv8, déployé sur edge devices avec ONNX Runtime.",
-        tech: ['Python', 'YOLOv8', 'OpenCV', 'ONNX'],
-        github: '#',
+        icon: '🖼️',
+        title: "Traitement d'image (La corrélation en C)",
+        desc: "Description à remplacer...",
+        tech: ['C', 'OpenCV', 'C++'],
+        github: 'https://github.com/MedddourSoheib/Image-Processing',
+        demo: '#',
+    },
+
+    {
+        icon: '💡',
+        title: 'Détecteur Automatisé de Source Lumineuse',
+        desc: "Description à remplacer...",
+        tech: ['Arduino', 'Électronique', 'C++'],
+        github: 'https://github.com/MedddourSoheib/Automated-light-source-detector',
         demo: '#',
     },
     {
-        icon: '🎨',
-        title: 'ArtGen — IA Générative',
-        desc: "Pipeline de génération d'images artistiques utilisant Stable Diffusion avec interface web intuitive.",
-        tech: ['Python', 'Diffusers', 'Gradio', 'CUDA'],
-        github: '#',
+        icon: '⚙️',
+        title: 'FPGA',
+        desc: "Description à remplacer...",
+        tech: ['VHDL', 'Verilog', 'Électronique Numérique'],
+        github: 'https://github.com/MedddourSoheib/FPGA-VHDL-',
         demo: '#',
     },
-    {
-        icon: '📊',
-        title: 'DataViz 3D Dashboard',
-        desc: 'Dashboard de visualisation de données ML interactif avec graphiques 3D et animations en temps réel.',
-        tech: ['React', 'Three.js', 'D3.js', 'WebGL'],
-        github: '#',
-        demo: '#',
-    },
-    {
-        icon: '🧬',
-        title: 'BioML — Analyse Génomique',
-        desc: 'Modèle de classification de séquences ADN avec transformers pour la prédiction de maladies génétiques.',
-        tech: ['Python', 'HuggingFace', 'BioPython', 'Sklearn'],
-        github: '#',
-        demo: '#',
-    },
-    {
-        icon: '🌐',
-        title: 'Portfolio 3D',
-        desc: 'Ce portfolio — construit avec React, Three.js, Framer Motion et GSAP pour une expérience immersive.',
-        tech: ['React', 'Three.js', 'GSAP', 'Framer Motion'],
-        github: '#',
-        demo: '#',
-    },
+
 ];
 
 export default function Projects() {
